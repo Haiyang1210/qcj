@@ -1,0 +1,17 @@
+.footer{
+  width: 1200px;
+	height: 150px;
+	margin: 30px auto 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.footer>span{
+	color: #868686;
+	font-size: .8rem;
+}
+.footer>span:first-child{
+	font-size: 1.3rem;
+	margin-bottom: 10px;
+}

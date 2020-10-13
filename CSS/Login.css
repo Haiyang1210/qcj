@@ -1,0 +1,65 @@
+*{
+  padding: 0;
+  margin: 0;
+
+}
+
+body::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../carImg/丰田/丰田亚洲龙.jpg);
+  filter: blur(7px);
+  z-index: -1;
+  background-size: cover;
+}
+.nav{
+  width: 100%;
+  height: 68px;
+  background: #212121;
+  color:white;
+  display: flex;
+  align-items: center;
+}
+.nav  a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding-left: 100px;
+}
+.form{
+  width: 350px;
+  background: rgba(208, 205, 212, 0.9);
+  height: 500px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+.form .form-div{
+  background: crimson;
+}
+.form .kong{
+  height: 100px;
+}
+.form .kong-1{
+  height: 50px;
+}
+.form input[type=text]{
+  width: 150px;
+  height: 35px;
+}
+.form input[type=text]:focus{
+  outline: none;
+}
+.form input[type=submit]{
+  width: 150px;
+  height: 35px;
+}
+.form h2{
+  padding-top: 30px;
+}

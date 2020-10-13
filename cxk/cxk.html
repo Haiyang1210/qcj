@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>车型库</title>
+  <link rel="stylesheet" href="../CSS/header.css">
+  <link rel="stylesheet" href="../CSS/cxk.css">
+  <script src="../JS/car.js"></script>
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <header class="header">
+		<div>
+			<ul>
+				<li><a href="../index.html">汽车集</a></li>
+				<li><a href="../index.html">首页</a></li>
+        <li><a href="cxk.html" style="color: #cc2323">车型库</a></li>
+        <li><a href="shoucang.html">收藏</a></li>
+				<li class="sousuo">
+					<div>
+						<input type="text" />
+						<button>
+							<ion-icon name="search-outline" style="color: white; font-size: 25px"></ion-icon>
+						</button>
+					</div>
+					<div class="sousuo-s"></div>
+				</li>
+				<li style="cursor: pointer">
+					<span>广州</span>&nbsp;<span>></span>
+					<div class="region hid">
+						<div>当前选择 <span>{{dq[2]}}</span></div>
+						<ul>
+							<li v-for="(key) in dq">{{key}}</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="../login.html">登录</a>&nbsp;|&nbsp;<a href="../register.html">注册</a></li>
+				<li></li>
+			</ul>
+
+		</div>
+	</header>
+  <main class="main">
+    <section class="main-left">
+      <div class="tj-left">
+        <p>条件筛选</p>
+        <hr>
+        <ul>
+          <li>车型:</li>
+          <li class="tiaojian">不限</li>
+          <li>轿车</li>
+          <li>SUV</li>
+          <li>跑车</li>
+          <li>皮卡</li>
+          <li>MPV</li>
+          <li>微面</li>
+          <li>微卡</li>
+          <li>轻客</li>
+        </ul>
+        <hr>
+        <ul>
+          <li>价格:</li>
+          <li class="tiaojian">不限</li>
+          <li>10万以下</li>
+          <li>10-15万</li>
+          <li>20-25万</li>
+          <li>25-30万</li>
+          <li>30-40万</li>
+          <li>50万以上</li>
+          <li></li>
+        </ul>
+        <hr>
+        <ul>
+          <li>国家:</li>
+          <li class="tiaojian">不限</li>
+          <li>中国</li>
+          <li>美国</li>
+          <li>德国</li>
+          <li>日本</li>
+          <li>韩国</li>
+          <li>法国</li>
+          <li>英国</li>
+          <li>其他</li>
+        </ul>
+        <hr>
+        <ul>
+          <li>变速箱:</li>
+          <li class="tiaojian">不限</li>
+          <li>手动</li>
+          <li>自动</li>
+        </ul>
+        <hr>
+      </div>
+      <hr>
+      <div class="left-2">
+        <ul>
+          <li>
+            <span>0</span>
+            <span>车符合条件</span>
+          </li>
+          <li>价格由高到低</li>
+          <li>价格由低到高</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="left-neirong">
+        <div>
+          <img src="../carImg/car/奥迪TT.png" alt="">
+          <p>奥迪TT</p>
+          <p>50-95万</p>
+        </div>
+      </div>
+    </section>
+    <div class="main-right">
+      <div class="right-1">
+        <ul>
+          <li>A</li>
+          <li>B</li>
+          <li>C</li>
+          <li>D</li>
+          <li>E</li>
+          <li>F</li>
+          <li>G</li>
+          <li>H</li>
+          <li>I</li>
+          <li>J</li>
+          <li>K</li>
+          <li>L</li>
+          <li>M</li>
+          <li>N</li>
+          <li>O</li>
+          <li>P</li>
+          <li>Q</li>
+          <li>R</li>
+          <li>S</li>
+          <li>T</li>
+          <li>U</li>
+          <li>V</li>
+          <li>W</li>
+          <li>X</li>
+          <li>Y</li>
+          <li>Z</li>
+        </ul>
+      </div>
+      <div class="right-2">
+        <p>A</p>
+        <ul>
+          <li>奥迪</li>
+          <li>奥迪</li>
+          <li>奥迪</li>
+          <li>奥迪</li>
+          <li>奥迪</li>
+        </ul>
+        <p>B</p>
+        <ul>
+          <li>本田</li>
+          <li>本田</li>
+          <li>本田</li>
+          <li>本田</li>
+          <li>本田</li>
+          <li>本田</li>
+        </ul>
+        <p>C</p>
+        <ul>
+          <li>长安</li>
+          <li>长安</li>
+          <li>长安</li>
+          <li>长安</li>
+          <li>长安</li>
+        </ul>
+        <p>D</p>
+        <ul>
+          <li>大众</li>
+          <li>大众</li>
+          <li>大众</li>
+          <li>大众</li>
+          <li>大众</li>
+        </ul>
+        <p>E</p>
+        <ul>
+          <li>长安</li>
+          <li>长安</li>
+          <li>长安</li>
+          <li>长安</li>
+          <li>长安</li>
+        </ul>
+        <p>F</p>
+        <ul>
+          <li>长安</li>
+          <li>长安</li>
+          <li>长安</li>
+          <li>长安</li>
+          <li>长安</li>
+        </ul>
+        <p>G</p>
+        <ul>
+          <li>长安</li>
+          <li>长安</li>
+          <li>长安</li>
+          <li>长安</li>
+          <li>长安</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+	
+
+  <script src="../JS/cxk.js"></script>
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  <script src="../JS/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../CSS/shangpin.css" />
+		<link rel="stylesheet" href="../CSS/header.css" />
+		<link rel="stylesheet" href="../CSS/footer.css" />
+		<script src="../vue.js"></script>
+		<script src="../JS/car.js"></script>
+	</head>
+
+	<body>
+		<header class="header">
+			<div>
+				<ul>
+					<li><a href="../index.html">汽车集</a></li>
+					<li><a href="../index.html">首页</a></li>
+					<li><a href="cxk.html" style="color: #cc2323">车型库</a></li>
+					<li class="sousuo">
+						<div>
+							<input type="text" />
+							<button>
+								<ion-icon
+									name="search-outline"
+									style="color: white; font-size: 25px"
+								></ion-icon>
+							</button>
+						</div>
+						<div class="sousuo-s"></div>
+					</li>
+					<li style="cursor: pointer">
+						<span>广州</span>&nbsp;<span>></span>
+						<div class="region hid">
+							<div>当前选择 <span>{{dq[2]}}</span></div>
+							<ul>
+								<li v-for="(key) in dq">{{key}}</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="../login.html">登录</a>&nbsp;|&nbsp;<a href="../register.html"
+							>注册</a
+						>
+					</li>
+					<li></li>
+				</ul>
+			</div>
+		</header>
+		<main class="main">
+			<div class="main-img">
+				<img src="../carImg/奔驰C级.jpg" alt="" />
+			</div>
+			<div class="main-kuang">
+				<div class="main-kuang-div">
+					<h1>奔驰C级</h1>
+					<p>价格</p>
+					<div>
+						<p>介绍</p>
+					</div>
+					<button>购买</button>
+					<button class="sc">点击收藏</button>
+				</div>
+				<div class="hong">
+					<div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+            <div></div>
+            <div></div>
+						<div></div>
+            <div></div>
+            <div></div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<section>
+			<div class="section-div">
+				<img src="../carImg/丰田/丰田卡罗拉.jpg" alt="" />
+				<img src="../carImg/凯迪拉克/凯迪拉克CT4.jpg" alt="" />
+				<img src="../carImg/奥迪/奥迪A7.jpg" alt="" />
+			</div>
+		</section>
+
+		<footer class="footer">
+			<span>@ 2020.9</span>
+			<span>* 个人项目 *</span>
+		</footer>
+
+		<!-- 右下角收藏夹 -->
+		<div class="ion">
+			<ion-icon name="heart-sharp"></ion-icon>
+			<span>收藏</span>
+		</div>
+
+		<script src="../JS/shangpin.js"></script>
+		<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+		<script src="../JS/header.js"></script>
+	</body>
+	<script>
+		//另一个页面传过来的值
+		let zhongwen = decodeURIComponent(window.location.search, "utf-8");
+		let zw = zhongwen.substr(1);
+
+		(function () {
+			let main = document.querySelector("main");
+			let img = main.querySelector(".main-img>img");
+			let h1 = main.querySelector(".main-kuang-div>h1");
+			let p = main.querySelector(".main-kuang-div>p");
+			let divp = main.querySelector(".main-kuang-div>div>p");
+
+			car.forEach((val) => {
+				if (val.name == zw) {
+					img.src = "../" + val.img;
+					h1.innerHTML = val.name;
+					p.innerHTML = val.price;
+					divp.innerHTML = val.js;
+				}
+			});
+    })();
+    
+    function shouc(){
+      let sc = document.querySelector('.sc');
+      let hong = document.querySelector('.hong');
+      let hongdiv = hong.children[0];
+      let ion = document.querySelector('.ion>ion-icon');
+      sc.addEventListener('click',()=>{
+        hongdiv.classList.add('ssc');
+        hong.classList.add('shoucang');
+        setTimeout(()=>{
+          ion.style.animation = 'io 1s forwards';
+        },800)
+      })
+    }
+    shouc();
+	</script>
+</html>

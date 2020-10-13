@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../CSS/header.css">
+</head>
+<body>
+  <header class="header">
+		<div>
+			<ul>
+				<li><a href="../index.html">汽车集</a></li>
+				<li><a href="../index.html">首页</a></li>
+				<li><a href="cxk.html">车型库</a></li>
+				<li><a href="shoucang.html" style="color: #cc2323">收藏</a></li>
+				<li class="sousuo">
+					<div>
+						<input type="text" />
+						<button>
+							<ion-icon name="search-outline" style="color: white; font-size: 25px"></ion-icon>
+						</button>
+					</div>
+					<div class="sousuo-s"></div>
+				</li>
+				<li style="cursor: pointer">
+					<span>广州</span>&nbsp;<span>></span>
+					<div class="region hid">
+						<div>当前选择 <span>{{dq[2]}}</span></div>
+						<ul>
+							<li v-for="(key) in dq">{{key}}</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="../login.html">登录</a>&nbsp;|&nbsp;<a href="../register.html">注册</a></li>
+				<li></li>
+			</ul>
+
+		</div>
+  </header>
+  
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+</body>
+</html>

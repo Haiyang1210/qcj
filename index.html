@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>汽车集</title>
+	<link rel="stylesheet" href="CSS/index.css" />
+	<link rel="stylesheet" href="CSS/header.css" />
+	<link rel="stylesheet" href="CSS/footer.css">
+	<script src="JS/car.js"></script>
+	<script src="vue.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<div>
+			<ul>
+				<li><a href="index.html">汽车集</a></li>
+				<li><a href="index.html" style="color: #cc2323">首页</a></li>
+				<li><a href="cxk/cxk.html">车型库</a></li>
+				<li><a href="cxk/shoucang.html">收藏</a></li>
+				<li class="sousuo">
+					<div>
+						<input type="text" />
+						<button>
+							<ion-icon name="search-outline" style="color: white; font-size: 25px"></ion-icon>
+						</button>
+					</div>
+					<div class="sousuo-s"></div>
+				</li>
+				<li style="cursor: pointer">
+					<span>广州</span>&nbsp;<span>></span>
+					<div class="region hid">
+						<div>当前选择 <span>{{dq[2]}}</span></div>
+						<ul>
+							<li v-for="(key) in dq">{{key}}</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="login.html">登录</a>&nbsp;|&nbsp;<a href="register.html">注册</a></li>
+				<li></li>
+			</ul>
+
+		</div>
+	</header>
+	<main class="main">
+		<div class="toubu">
+			<ul>
+				<li>
+					<div><img src="carImg/index/轿车.png" alt="" /></div>
+					<span>轿车</span>
+				</li>
+				<li>
+					<div><img src="carImg/index/SUV.png" alt="" /></div>
+					<span>SUV</span>
+				</li>
+				<li>
+					<div><img src="carImg/index/MPV.png" alt="" /></div>
+					<span>MPV</span>
+				</li>
+				<li>
+					<div><img src="carImg/index/微卡.png" alt="" /></div>
+					<span>微卡</span>
+				</li>
+				<li>
+					<div><img src="carImg/index/微面.png" alt="" /></div>
+					<span>微面</span>
+				</li>
+				<li>
+					<div><img src="carImg/index/皮卡.png" alt="" /></div>
+					<span>皮卡</span>
+				</li>
+				<li>
+					<div><img src="carImg/index/跑车.png" alt="" /></div>
+					<span>跑车</span>
+				</li>
+				<li>
+					<div><img src="carImg/index/班车.png" alt="" /></div>
+					<span>班车</span>
+				</li>
+			</ul>
+		</div>
+
+		<section>
+			<div class="img">
+				<img src="carImg/index/lunbo2.jpg" alt="" />
+				<div class="left">
+					<ion-icon name="arrow-back-circle-outline"></ion-icon>
+				</div>
+				<div class="right">
+					<ion-icon name="arrow-forward-circle-outline"></ion-icon>
+				</div>
+			</div>
+		</section>
+
+		<div class="lunb2">
+			<div class="lunb2-nav">
+				<span>精选车型</span>
+			</div>
+			<div class="lunb2-kuang">
+				<div class="kuang1" style="background: rgb(164, 241, 214)">
+					<div class="k-1">
+						<div>
+							<img src="carImg/index/X2.jpg" alt="" />
+							<span>哈佛H6</span>
+						</div>
+					</div>
+					<div class="k-1">
+						<div>
+							<img src="carImg/index/X1.jpg" alt="" />
+							<span>奥迪A3</span>
+						</div>
+						<div>
+							<img src="carImg/index/X3.jpg" alt="" />
+							<span>本田雅阁</span>
+						</div>
+						<div>
+							<img src="carImg/index/X5.jpg" alt="" />
+							<span>丰田凯美瑞</span>
+						</div>
+						<div>
+							<img src="carImg/index/X6.jpg" alt="" />
+							<span>丰田卡罗拉</span>
+						</div>
+					</div>
+					<div class="k-1">
+						<div>
+							<img src="carImg/index/X4.jpg" alt="" />
+							<span>宝马5系</span>
+						</div>
+					</div>
+				</div>
+				<div class="kuang1" style="background: rgb(169, 240, 200)">
+					<div class="k-1">
+						<div>
+							<img src="carImg/index/S1.jpg" alt="" />
+							<span>领克03</span>
+						</div>
+					</div>
+					<div class="k-1">
+						<div>
+							<img src="carImg/index/S2.jpg" alt="" />
+							<span>大众途岳</span>
+						</div>
+						<div>
+							<img src="carImg/index/S3.jpg" alt="" />
+							<span>奥迪A3</span>
+						</div>
+						<div>
+							<img src="carImg/index/S5.jpg" alt="" />
+							<span>本田冠道</span>
+						</div>
+						<div>
+							<img src="carImg/index/S6.jpg" alt="" />
+							<span>长城SG4</span>
+						</div>
+					</div>
+					<div class="k-1">
+						<div>
+							<img src="carImg/index/S4.jpg" alt="" />
+							<span>凯迪拉克CT5</span>
+						</div>
+					</div>
+				</div>
+				<div class="kuang1" style="background: rgb(246, 209, 191)">
+					<div class="k-1">
+						<div>
+							<img src="carImg/index/J1.jpg" alt="" />
+							<span>保时捷</span>
+						</div>
+					</div>
+					<div class="k-1">
+						<div>
+							<img src="carImg/index/J2.jpg" alt="" />
+							<span>玛莎拉蒂</span>
+						</div>
+						<div>
+							<img src="carImg/index/J3.jpg" alt="" />
+							<span>保时捷</span>
+						</div>
+						<div>
+							<img src="carImg/index/J5.jpg" alt="" />
+							<span>迈凯伦</span>
+						</div>
+						<div>
+							<img src="carImg/index/J6.jpg" alt="" />
+							<span>魅影</span>
+						</div>
+					</div>
+					<div class="k-1">
+						<div>
+							<img src="carImg/index/J4.jpg" alt="" />
+							<span>奥迪</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="jryw">
+			<div class="jryw-2">
+				<span>今日要闻</span>
+			</div>
+			<div class="jryw-box">
+				<div class="jryw-3">
+					<div>
+						<p><b>曝光</b> | 五菱凯捷开启盲订 将于9月28日公布预售价</p>
+					</div>
+				</div>
+				<div class="rmcx">
+					<div class="rmcx-1">
+						<span>热门车型</span>
+					</div>
+					<div class="rmcx-2">
+						<div>
+							<img src="carImg/car/日产轩逸.png" alt="" />
+							<div>
+								<span>轩逸</span>
+								<span>8.78-13.9万</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<span>@ 2020.9</span>
+		<span>* 个人项目 *</span>
+	</footer>
+
+	<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+	<script src="JS/index.js"></script>
+	<script src="JS/header.js"></script>
+</body>
+
+</html>
